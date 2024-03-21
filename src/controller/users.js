@@ -24,7 +24,7 @@ const createNewUsers = async (req, res) => {
     });
   }
   try {
-    await usersModel.createNewUser(body);
+    await usersModel.createNewUsers(body);
     res.status(201).json({
       message: "CREATE new user success",
       data: body,
