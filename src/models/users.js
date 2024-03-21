@@ -6,8 +6,9 @@ const getAllUsers = () => {
   return dbPool.execute(sqlQuery);
 };
 
-const createNewUsers = () => {
-  const sqlQuery = `INSERT INTO users(nama, email, address) VALUES ('${body.nama}','${body.email}','${body.address}')`;
+const createNewUsers = (body) => {
+  const sqlQuery = `INSERT INTO users (nama, email, address) 
+                    VALUES ('${body.nama}', '${body.email}', '${body.address}')`;
 
   return dbPool.execute(sqlQuery);
 };

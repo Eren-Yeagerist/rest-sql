@@ -16,7 +16,7 @@ const getAllUsers = async (req, res) => {
 };
 
 const createNewUsers = async (req, res) => {
-  const body = req.body;
+  const { body } = req;
   if (!body.nama || !body.email || !body.address) {
     return res.status(400).json({
       message: "Anda mengirimkan data yang salah",
